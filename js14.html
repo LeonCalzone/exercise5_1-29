@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bento Box Accordion</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100vh;
+            grid-gap: 10px;
+            width: 100vw;
+        }
+
+        .grid-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+
+        .content {
+            display: none;
+            padding: 10px;
+            border-top: none;
+        }
+
+        .active .content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div>Item 1</div>
+            <div class="content">Content for Item 1</div>
+        </div>
+        <div class="grid-item">
+            <div>Item 2</div>
+            <div class="content">Content for Item 2</div>
+        </div>
+        <div class="grid-item">
+            <div>Item 3</div>
+            <div class="content">Content for Item 3</div>
+        </div>
+        <div class="grid-item">
+            <div>Item 4</div>
+            <div class="content">Content for Item 4</div>
+        </div>
+    </div>
+
+    <script>
+document.querySelectorAll('.grid-item').forEach(item => {
+    item.addEventListener('click', function() {
+        item.classList.toggle('active');
+    });
+});    </script>
+</body>
+</html>

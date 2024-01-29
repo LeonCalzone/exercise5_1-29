@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Detector With Color</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="flip-text">HELLO WORLD!</h1>
+</body>
+<script>
+    let count = 0;
+    let colors = ['black', 'white'];
+    let textColors = ['white', 'black'];
+
+    document.addEventListener('click', function() {
+        // Change the background color
+        document.body.style.backgroundColor = colors[count];
+        // Change the text color of h1 to be opposite
+        document.getElementById('flip-text').style.color = textColors[count];
+
+        if (count < colors.length) {
+            console.log(`Current color: ${colors[count]}`);
+            count++;
+        } 
+        if (count >= colors.length){
+            // Reset the index to 0 to cycle through the colors again
+            count = 0;
+        }
+    });
+</script>
+</html>

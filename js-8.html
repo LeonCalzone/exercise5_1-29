@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Name Text Changer</title>
+</head>
+<body>
+    <h1 class="message">Hello World!</h1>
+    <button id="changeTextButton">Change Color Name</button>
+
+    <script>
+        let count = 0;
+        let colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
+        let messageElement = document.querySelector('.message'); //declare variable
+
+        document.getElementById('changeTextButton').addEventListener('click', function() {
+            messageElement.textContent = colors[count]; //change message
+            messageElement.style.color = colors[count]; // change text color
+            count++;
+            if (count >= colors.length) {
+                count = 0; // Reset count to cycle through colors again
+            }
+        });
+    </script>
+</body>
+</html>

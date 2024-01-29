@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Show/Hide Menu with Toggle</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleMenuButton">Toggle Menu</button>
+    <div id="menu" >
+        <p>Menu Item 1</p>
+        <p>Menu Item 2</p>
+        <p>Menu Item 3</p>
+    </div>
+
+    <script>
+        
+    document.getElementById('toggleMenuButton').addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('hidden');
+});
+    </script>
+</body>
+</html>

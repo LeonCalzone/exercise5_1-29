@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Grid</title>
+    <style>
+        body{margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Creates a 3x3 grid */
+            gap: 10px;
+            height: 100vh;
+        }
+
+        .grid-item {
+            padding: 20px;
+            border: 1px solid black;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #4CAF50; /* Green background for active items */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+        <div class="grid-item">Item 7</div>
+        <div class="grid-item">Item 8</div>
+        <div class="grid-item">Item 9</div>
+    </div>
+
+    <script>
+    document.querySelectorAll('.grid-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+});    </script>    
+</body>
+</html>

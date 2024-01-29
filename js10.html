@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Light/Dark Mode Toggle</title>
+    <style>
+        .dark-mode {
+            background-color: #000000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleModeButton">Toggle Light/Dark Mode</button>
+    <p>Welcome to the page!</p>
+</body>
+<script>
+document.getElementById('toggleModeButton').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
+</script>
+</html>
