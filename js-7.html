@@ -5,11 +5,13 @@
 </head>
 <body>
     <h1 class="message">Hello World!</h1>
-    <button id="changeTextButton">Change Text</button>
+    <button id="changeTextButton">Change Text</button> 
 
     <script>
+                document.body.style.fontFamily = 'Arial, sans-serif';
+
     document.getElementById('changeTextButton').addEventListener('click', function() {
-    const messageElement = document.querySelector('.message');
+    const messageElement = document.querySelector('.message'); //selects the first element with the class of 'message'
     messageElement.textContent = 'Text Changed!';
 });
     </script>

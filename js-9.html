@@ -4,13 +4,14 @@
     <title>Simple Show/Hide Menu with Toggle</title>
     <style>
         .hidden {
-            display: none;
+            display: none; 
+            /* set up a hidden state */
         }
     </style>
 </head>
 <body>
-    <button id="toggleMenuButton">Toggle Menu</button>
-    <div id="menu" >
+    <button id="toggleMenuButton">Toggle Menu</button> 
+    <div id="menu" >  <!-- menus will always be classes bc they're many things under one label -->
         <p>Menu Item 1</p>
         <p>Menu Item 2</p>
         <p>Menu Item 3</p>
@@ -19,7 +20,7 @@
     <script>
         
     document.getElementById('toggleMenuButton').addEventListener('click', function() {
-    document.getElementById('menu').classList.toggle('hidden');
+    document.getElementById('menu').classList.toggle('hidden'); // if you click the button then it will hide the menu
 });
     </script>
 </body>

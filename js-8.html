@@ -11,9 +11,10 @@
         let count = 0;
         let colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
         let messageElement = document.querySelector('.message'); //declare variable
+        let dolphins = [ 'lucy', 'jim', 'joe', 'bob', 'jane', 'jill'];
 
         document.getElementById('changeTextButton').addEventListener('click', function() {
-            messageElement.textContent = colors[count]; //change message
+            messageElement.textContent = dolphins[count]; //change message (If i got rid of this, the 'Hello World' would just change color)
             messageElement.style.color = colors[count]; // change text color
             count++;
             if (count >= colors.length) {
